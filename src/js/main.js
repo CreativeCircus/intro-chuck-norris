@@ -5,7 +5,6 @@
 // and then modify the showFact function to make it do what you want with the data.
 let getFact = function() {
 	const CHUCK_API = 'https://api.chucknorris.io/jokes/random';
-	factElement.innerHTML = '';
 	
 	axios.get(CHUCK_API)
 		.then(function(response) {
