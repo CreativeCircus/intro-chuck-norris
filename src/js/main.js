@@ -3,12 +3,11 @@
 // We then call showFact with that object
 // You shouldn't need to modify this function, just call it when you need a new fact,
 // and then modify the showFact function to make it do what you want with the data.
-let getFact = function() {
-	const CHUCK_API = 'https://api.chucknorris.io/jokes/random';
-	
+let getFact = function () {
+	const CHUCK_API = 'http://api.icndb.com/jokes/random';
+
 	axios.get(CHUCK_API)
-		.then(function(response) {
-			// chuckData = response;
+		.then(function (response) {
 			showFact(response.data)
 		})
 		.catch(function (error) {
@@ -17,8 +16,7 @@ let getFact = function() {
 }
 
 
-let showFact = function(data) {
+let showFact = function (data) {
 	console.log(data)
-	
-}
 
+}
